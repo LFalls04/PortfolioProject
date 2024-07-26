@@ -14,10 +14,8 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
 <script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "yrJCFJpnEuTeBXgjR",
-      });
+   (function () {
+      emailjs.init("yrJCFJpnEuTeBXgjR");
    })();
 </script>
   </head>
@@ -28,7 +26,7 @@
           <img id="personal-logo" src="./assets/LogoNEW.svg" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -45,7 +43,7 @@
             </a>
           </li>
 
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -72,7 +70,7 @@
             <b class="red">designing</b> websites, and this is my
             <b class="red">portfolio.</b>
             <br />
-            Here's some more information on <b class="red">who I am.</b>
+            Here's some more information on <b class="red click" onclick="toggleModal()">who I am.</b>
           </p>
           <div class="social__list">
             <a
@@ -95,7 +93,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fas fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -122,6 +120,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's Connect!
           </h3>
           <h4 class="modal__subtitle modal__subttitle--contact">I'm currently open to new opportunities.
@@ -147,7 +146,6 @@
           <div class="modal__overlay modal__overlay--success">I appreciate the message.  Looking forward to speaking soon!
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
